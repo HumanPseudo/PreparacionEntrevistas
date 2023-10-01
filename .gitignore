@@ -1,0 +1,20 @@
+# Ignorar archivos generados por Python
+__pycache__/
+*.py[cod]
+
+# Ignorar el entorno virtual (si se usa)
+venv/
+
+# Ignorar archivos generados por el sistema operativo
+*.DS_Store
+
+# Ignorar archivos de configuración específicos de los IDE
+.idea/
+.vscode/
+
+# Ignorar los archivos de registro y salida
+*.log
+*.out
+
+# Ignorar archivos de dependencias
+pip-lock.txt
