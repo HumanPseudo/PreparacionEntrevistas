@@ -14,19 +14,30 @@ from typing import Dict, List
 from mypy_extensions import TypedDict
 
 class GroupAnagram:
+
+    def __init__(self):
+        pass
+
     @staticmethod
-    def group_anagrams(strs: List[str]) -> List[List[str]]:
+    def group_anagrams(strs):
         """
-        Builds a dictionary mapping anagrams to a list of words.
+        Group anagrams from a list of strings.
         
-        Parameters:
-            strs (List[str]): A list of strings representing words.
+        Args:
+            strs (List[str]): A list of strings to group anagrams from.
         
         Returns:
-            Dict[str, List[str]]: A dictionary where the keys are anagrams and the values are lists of words that are anagrams of each other.
+            List[List[str]]: A list of lists, each containing a group of anagrams.
         """
-        anagram_map = GroupAnagram.build_anagram_map(strs)
-        return list(anagram_map.values())
+        anagram_map = defaultdict(list)
+
+        for word in strs:
+            # Ordena las letras de la palabra para obtener la clave
+            key = "".join(sorted(word))
+            anagram_map[key].append(word)
+
+        # Retorna la lista de grupos de anagramas
+        return [anagram_group for anagram_group in anagram_map.values()]
 
     @staticmethod
     def get_anagram_hash(s: str) -> str:
