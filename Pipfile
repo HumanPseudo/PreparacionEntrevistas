@@ -4,10 +4,18 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+<<<<<<< HEAD
 matplotlib = "*"
 networkx = "*"
+=======
+mypy-extensions = "*"
+>>>>>>> 7cc6dd27f2c995e7057fa1380d709ae301f3d0e0
 
 [dev-packages]
 
 [requires]
+<<<<<<< HEAD
 python_version = "3.10"
+=======
+python_version = "3.11"
+>>>>>>> 7cc6dd27f2c995e7057fa1380d709ae301f3d0e0
