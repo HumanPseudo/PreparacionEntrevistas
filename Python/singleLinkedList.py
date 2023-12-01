@@ -18,6 +18,21 @@ class LinkedList:
         Initialize a new LinkedList object.
         """
         self.head = None
+    
+
+    def to_list(self):
+        """
+        Convert the linked list to a Python list.
+
+        Returns:
+            A Python list containing the data stored in the linked list.
+        """
+        result = []
+        current = self.head
+        while current:
+            result.append(current.data)
+            current = current.next_node
+        return result
 
     def is_empty(self):
         """
