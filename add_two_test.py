@@ -28,5 +28,4 @@ add_two_numbers_instance = AddTwoNumbers(list1, list2)
 # Print the intermediate results
 print("List 1:", linked_list_to_list(list1))
 print("List 2:", linked_list_to_list(list2))
-add_two_numbers_instance.plot_lists()
 print("Result:", linked_list_to_list(add_two_numbers_instance.result))
